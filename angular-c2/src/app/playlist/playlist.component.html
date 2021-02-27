@@ -7,7 +7,7 @@
 </div>
 
 <div class="container" style="background-color: cyan">
-  <button mat-raised-button color="primary"><i class="fa fa-plus-square" style="font-size: 150%; margin-right: 15px;"></i>Add Playlist</button>
+  <button mat-raised-button color="primary" (click) = "playlistDetail({},-1)"><i class="fa fa-plus-square" style="font-size: 150%; margin-right: 15px;"></i>Add Playlist</button>
   <mat-card class="card" *ngFor="let list of dataPlay; let i = index">
     <mat-card-header>
       <mat-card-title>{{list.name}}</mat-card-title>
