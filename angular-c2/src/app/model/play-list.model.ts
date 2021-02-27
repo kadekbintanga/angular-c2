@@ -12,7 +12,7 @@ export interface Song {
   duration: number;
 }
 
-export class PlaylistComponent {
+export class PlayListComponent {
 
   // use this data as the mock data for the app
   playlists: Playlist[] = [
