@@ -6,8 +6,29 @@
   <h1>YOUR PLAY LIST</h1>
 </div>
 
-<div class="container">
-  <h1>Testing</h1>
+<div class="container" style="background-color: cyan">
+  <button mat-raised-button color="primary"><i class="fa fa-plus-square" style="font-size: 150%; margin-right: 15px;"></i>Add Playlist</button>
+  <mat-card class="card" *ngFor="let list of dataPlay; let i = index">
+    <mat-card-header>
+      <mat-card-title>{{list.name}}</mat-card-title>
+      <mat-card-subtitle>Total {{list.totalSongs}} songs, {{list.totalDuration}} minutes</mat-card-subtitle>
+      <mat-card-subtitle style="color: black;" >{{list.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card class="list-item font-music content-music" *ngFor ="let song of list.songs">
+      <div>
+        <i class='fa fa-music icon-music'></i>
+      </div>
+      <div>
+        <h3>{{song.title}}</h3>
+        <h5 style="margin-top: -20px;">{{song.artist}} . {{song.duration}} minutes</h5>
+      </div>
+    </mat-card>
+    <div style="margin-top: 30px;">
+      <button mat-button style="color: red;" >DELETE</button>
+      <button mat-button>EDIT</button>
+    </div>
+  </mat-card>
+
 </div>
 </body>
 

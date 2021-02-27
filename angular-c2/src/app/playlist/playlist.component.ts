@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayListComponent} from '../model/play-list.model';
 import {Playlist} from '../model/play-list.model';
+import {Song} from '../model/play-list.model';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
@@ -12,7 +13,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class PlaylistComponent implements OnInit {
 
-  constructor() { }
+  public playList: PlayListComponent = new PlayListComponent();
+  dataPlay: Playlist[] = this.playList.playlists;
 
   ngOnInit(): void {
   }
