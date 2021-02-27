@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayListComponent} from '../model/play-list.model';
 import {Playlist} from '../model/play-list.model';
+import {Song} from '../model/play-list.model';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { PlaylistDetailComponent } from './playlist-detail/playlist-detail.component';
 import { MatDialog } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
